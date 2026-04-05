@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mylo Calculator</title>
+</head>
+<body>
+
+<h2>Mylo Calculator 🧮</h2>
+
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+
+<br><br>
+
+<button onclick="add()">Add</button>
+<button onclick="sub()">Subtract</button>
+<button onclick="mul()">Multiply</button>
+<button onclick="div()">Divide</button>
+
+<h3 id="result"></h3>
+
+<script>
+function add() {
+    let x = Number(document.getElementById("num1").value);
+    let y = Number(document.getElementById("num2").value);
+    document.getElementById("result").innerText = "Answer = " + (x + y);
+}
+
+function sub() {
+    let x = Number(document.getElementById("num1").value);
+    let y = Number(document.getElementById("num2").value);
+    document.getElementById("result").innerText = "Answer = " + (x - y);
+}
+
+function mul() {
+    let x = Number(document.getElementById("num1").value);
+    let y = Number(document.getElementById("num2").value);
+    document.getElementById("result").innerText = "Answer = " + (x * y);
+}
+
+function div() {
+    let x = Number(document.getElementById("num1").value);
+    let y = Number(document.getElementById("num2").value);
+
+    if (y !== 0) {
+        document.getElementById("result").innerText = "Answer = " + (x / y);
+    } else {
+        document.getElementById("result").innerText = "Error: Division by zero!";
+    }
+}
+</script>
+
+</body>
+</html>
